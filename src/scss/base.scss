@@ -1,0 +1,18 @@
+@import "./abstracts/colors";
+@import "./abstracts/fonts";
+
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $primary-color;
+}
+
+body > * {
+  font-family: $font;
+}

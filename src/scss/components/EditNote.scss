@@ -1,0 +1,50 @@
+@import "../abstracts/fonts";
+@import "../abstracts/colors";
+@import "../mixins/alignment.scss";
+
+.edit-body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .edit-header {
+    @include align;
+    @include flexCenterCenter;
+    margin-top: 1rem;
+    color: $static-text-color;
+    justify-content: space-between;
+    letter-spacing: 0.2rem;
+    .page-title {
+      font-weight: 400;
+    }
+  }
+  .edit-title {
+    @include align;
+    @include flexCenterCenter;
+    margin-top: 2rem;
+    justify-content: start;
+    padding: 0.5rem;
+    color: rgb(54, 54, 54);
+    font-weight: 300;
+    background-color: $secondary-color;
+    height: 4rem;
+  }
+  .edit-note {
+    @include align;
+    @include flexCenterCenter;
+    margin-top: 2rem;
+    justify-content: start;
+    padding: 0.5rem;
+    color: rgb(54, 54, 54);
+    font-weight: 300;
+    background-color: $secondary-color;
+    height: 75%;
+  }
+  .edit-confirm {
+    @include alignEditAndCreate;
+    .checkmark {
+      margin-top: 1rem;
+      height: 5rem;
+      width: 5rem;
+    }
+  }
+}

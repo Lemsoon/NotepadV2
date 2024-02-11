@@ -1,0 +1,74 @@
+@import "../abstracts/colors";
+@import "../abstracts/fonts";
+@import "../mixins/alignment.scss";
+
+body {
+  .user-notes-header {
+    @include flexCenterCenter;
+    width: 100%;
+    justify-content: space-between;
+    color: $static-text-color;
+    .user-icon {
+      @include flexCenterCenter;
+      width: 4rem;
+      height: 4rem;
+      font-size: 3rem;
+      margin: 1rem;
+      background-color: $button-color;
+      color: $user-text-color;
+      border-radius: 100%;
+      font-weight: 500;
+      text-decoration: none;
+    }
+    .page-title {
+      text-align: center;
+      font-weight: 400;
+      letter-spacing: 0.2rem;
+      margin-right: 3rem;
+    }
+  }
+
+  .note {
+    @include align;
+    min-height: 7rem;
+    background-color: $secondary-color;
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: $user-text-color;
+    .note-title {
+      border-bottom: 0.1rem solid black;
+    }
+    .note-text {
+      padding-top: 0.2rem;
+      flex: 1;
+    }
+    .note-footer {
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      .note-edit-button {
+        width: 2.8rem;
+        height: 1.3rem;
+        background-color: $button-color;
+        color: $static-text-color;
+        font-weight: 100;
+        font-size: 0.8rem;
+        border: none;
+        border-radius: 0.2rem;
+      }
+    }
+  }
+
+  .create-note {
+    @include alignEditAndCreate;
+    margin-left: 75%;
+    .create-button {
+      height: 3rem;
+      width: 3rem;
+    }
+  }
+}
